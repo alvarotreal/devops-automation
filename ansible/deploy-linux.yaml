@@ -1,5 +1,6 @@
 - name: Copy and Start Go on Linux Server
-  hosts: webservers
+  hosts: localhost
+  connection: local
   become: yes
   tasks:
     - name: Copy Go Binary

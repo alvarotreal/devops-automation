@@ -1,6 +1,7 @@
 ---
 - name: Remove and Run Docker Container
-  hosts: webservers
+  hosts: localhost
+  connection: local
   become: yes
   tasks:
     - name: Stop and remove existing container (if it exists)
@@ -12,4 +13,4 @@
       ignore_errors: yes
 
     - name: Run a new container
-      command: docker run -itd -p 8080:8080 --name helloapp --rm ajtreal/hellogo
+      command: docker run -itd -p 7001:7001 --name helloapp --rm ajtreal/hellogo
