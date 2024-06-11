@@ -2,7 +2,7 @@ pipeline {
     agent any
 
    tools {
-       go 'go-1.22.4'
+       go 'go-1.21.3'
     }
 
     stages {
